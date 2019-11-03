@@ -1,0 +1,39 @@
+import java.util.Scanner;
+ class Shijian {
+
+	public static void main(String[] args) {
+		int UTC = 0;
+		int BJT=0;
+		 
+		Scanner in =new Scanner(System.in);
+		BJT=in.nextInt();
+		 
+		 
+					if((BJT>=60&&BJT<100&&BJT/10>=6) ||(BJT>=100&&BJT<1000&&BJT%100/10>=6 )||(BJT>=1000&&BJT/10%100>=6)) {
+					System.out.println("wrong number");}
+					
+					      if(BJT==0) {
+					        UTC=2400-800;
+						  System.out.println(UTC);}
+ 
+						  if(BJT>0&&BJT<=9) {
+							UTC=2400+BJT-800;
+						  System.out.println(UTC);}
+						  
+						    if(BJT>=10&&BJT<=59) {
+							UTC=2400+BJT-800;
+						  System.out.println(UTC);}
+						  
+						 if(BJT>=100&&BJT<800&&BJT%100/10<6) {
+							UTC=2400+BJT-800;
+						 System.out.println(UTC);}
+						 
+						 if(BJT>=800&&BJT<=959) {
+							UTC=BJT-800;
+						 System.out.println(UTC);}
+						 
+						  if(BJT>=1000&&BJT%100/10<6) {
+							UTC=BJT-800;
+						  System.out.println(UTC);} 
+		}	
+}
